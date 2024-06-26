@@ -23,6 +23,7 @@ export interface UnlayerOptions {
   tools?: object;
   appearance?: object;
   locale?: string;
+  displayMode?: string;
 }
 
 let lastEditorId = 0;
@@ -46,7 +47,7 @@ export class EmailEditorComponent implements OnInit, AfterViewInit {
 
   @Output() loaded = new EventEmitter();
   @Output() ready = new EventEmitter();
-  @Output() updated = new EventEmitter()
+  @Output() updated = new EventEmitter();
 
   editor: any;
 
@@ -85,10 +86,12 @@ export class EmailEditorComponent implements OnInit, AfterViewInit {
           options.locale = this.locale;
         }
 
+        options.displayMode = options.displayMode || 'email';
+
         this.editor = unlayer.createEditor({
           ...options,
           id: this.id,
-          displayMode: 'email',
+          displayMode: options.displayMode,
           source: {
             name: pkg.name,
             version: pkg.version,

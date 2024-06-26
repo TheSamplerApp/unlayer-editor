@@ -1,12 +1,12 @@
 {
-  "name": "@z-trippete/angular-email-editor",
-  "version": "18.0.0",
-  "repository": "https://github.com/z-trippete/angular-email-editor.git",
+  "name": "@the-sampler-app/unlayer-editor",
+  "version": "14.1.2",
+  "repository": "https://github.com/TheSamplerApp/unlayer-editor.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
-    "@angular/common": "^18.0.0",
-    "@angular/core": "^18.0.0"
+    "@angular/common": "^14.1.2",
+    "@angular/core": "^14.1.2"
   }
 }
